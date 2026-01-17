@@ -10,6 +10,11 @@ This project analyzes a sales dataset to:
 - Identify missing values
 - Generate summary statistics
 - Support basic business insights
+## 📊 Analysis Highlights
+
+- Performed exploratory data analysis using Python (Pandas, Matplotlib)
+- Visualized monthly sales trends and city-wise revenue distribution
+- Identified high-performing markets and business growth opportunities
 
 ## Folder Structure
 
