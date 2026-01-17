@@ -31,4 +31,24 @@ plt.xlabel("Category")
 plt.ylabel("Sales")
 plt.tight_layout()
 plt.show()
+# -------------------------
+# Monthly Sales Trend
+# -------------------------
+
+# Convert Order Date to datetime
+df["Order Date"] = pd.to_datetime(df["Order Date"])
+
+# Extract Year-Month
+df["YearMonth"] = df["Order Date"].dt.to_period("M")
+
+# Monthly sales
+monthly_sales = df.groupby("YearMonth")["Sales"].sum()
+
+plt.figure()
+monthly_sales.plot()
+plt.title("Monthly Sales Trend")
+plt.xlabel("Month")
+plt.ylabel("Total Sales")
+plt.tight_layout()
+plt.show()
 
